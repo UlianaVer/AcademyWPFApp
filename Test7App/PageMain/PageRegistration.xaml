@@ -1,0 +1,69 @@
+﻿<Page x:Class="Test7App.PageMain.PageRegistration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Test7App.PageMain"
+      mc:Ignorable="d" 
+      d:DesignHeight="297" d:DesignWidth="800"
+      Title="Форма регистрации">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        Margin="5">
+                <TextBlock 
+                    Text="Введите Логин:"
+                    Width="200"/>
+                <TextBox Width="250"
+                         Name="TxbLogin"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        Margin="5">
+                <TextBlock 
+                    Text="Введите Имя:"
+                    Width="200"/>
+                <TextBox Width="250"
+                         Name="TxbNameUser"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="5">
+                <TextBlock 
+                    Text="Введите Пароль:"
+                    Width="200"
+                    />
+                <TextBox Width="250"
+                         Name="TxbPass"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal"
+                        Margin="5">
+                <TextBlock 
+                    Text="Повторите Пароль:"
+                    Width="200"
+                    />
+                <PasswordBox Width="250"
+                             FontSize="17pt"
+                         Name="PsbRePass"
+                         PasswordChanged="PsbRePass_PasswordChanged"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+            <Button Content="Создать" 
+                    Name="BtnCreateUser"
+                    Click="BtnCreateUser_Click"/>
+            <Button Content="Назад" 
+                    Background="LightYellow"
+                    Name="BtnBack"
+                    Click="BtnBack_Click"/>
+                
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

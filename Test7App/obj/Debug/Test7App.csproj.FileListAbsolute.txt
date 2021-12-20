@@ -1,0 +1,123 @@
+C:\Users\burnf\source\repos\Test7App\Test7App\bin\Debug\Test7App.exe.config
+C:\Users\burnf\source\repos\Test7App\Test7App\bin\Debug\Test7App.exe
+C:\Users\burnf\source\repos\Test7App\Test7App\bin\Debug\Test7App.pdb
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\Test7App.csprojAssemblyReference.cache
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\MainWindow.g.cs
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\App.g.cs
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\Test7App_MarkupCompile.cache
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\Test7App_MarkupCompile.lref
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\MainWindow.baml
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\Test7App.g.resources
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\Test7App.Properties.Resources.resources
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\Test7App.csproj.GenerateResource.cache
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\Test7App.csproj.CoreCompileInputs.cache
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\Test7App.exe
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\Test7App.pdb
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\PageMain\PageInLogin.g.cs
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\PageMain\PageRegistration.g.cs
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\PageMain\PageInLogin.baml
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\PageMain\PageRegistration.baml
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\App.baml
+C:\Users\burnf\source\repos\Test7App\Test7App\bin\Debug\EntityFramework.dll
+C:\Users\burnf\source\repos\Test7App\Test7App\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\burnf\source\repos\Test7App\Test7App\bin\Debug\EntityFramework.xml
+C:\Users\burnf\source\repos\Test7App\Test7App\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\burnf\source\repos\Test7App\Test7App\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\Test7App_Content.g.cs
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\Test7App.csproj.CopyComplete
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\PageAdmin\PageMainAdmin.g.cs
+C:\Users\burnf\source\repos\Test7App\Test7App\obj\Debug\PageAdmin\PageMainAdmin.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\bin\Debug\Test7App.exe.config
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\bin\Debug\Test7App.exe
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\bin\Debug\Test7App.pdb
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\bin\Debug\EntityFramework.dll
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\bin\Debug\EntityFramework.xml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\MainWindow.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageMainAdmin.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageMain\PageInLogin.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageMain\PageRegistration.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\App.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\Test7App_Content.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\Test7App_MarkupCompile.cache
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\Test7App_MarkupCompile.lref
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\App.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\MainWindow.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageMainAdmin.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageMain\PageInLogin.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageMain\PageRegistration.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\Test7App.g.resources
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\Test7App.Properties.Resources.resources
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\Test7App.csproj.GenerateResource.cache
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\Test7App.csproj.CoreCompileInputs.cache
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\Test7App.csproj.CopyComplete
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\Test7App.exe
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\Test7App.pdb
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\WindowApp\WindowHelp.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\WindowApp\WindowHelp.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageAddStudent.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageAddStudent.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageAddGrade.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageAddGrade.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageDeleteStudent.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageEditGrade.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageEditing.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageJournalStudent.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageListStudent.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageDeleteStudent.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageEditGrade.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageEditing.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageJournalStudent.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageListStudent.baml
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\Test7App.csprojAssemblyReference.cache
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageMvc.g.cs
+C:\Users\burnf\source\repos\3105\Test7App\Test7App\obj\Debug\PageAdmin\PageMvc.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\Test7App.csproj.AssemblyReference.cache
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\MainWindow.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageAddGrade.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageAddStudent.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageDeleteStudent.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageEditGrade.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageEditing.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageJournalStudent.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageListStudent.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageMainAdmin.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageMvc.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageMain\PageInLogin.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageMain\PageRegistration.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\WindowApp\WindowHelp.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\App.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\Test7App_Content.g.cs
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\Test7App_MarkupCompile.cache
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\Test7App_MarkupCompile.lref
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\Test7App.exe
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\Test7App.pdb
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\bin\Debug\Test7App.exe.config
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\bin\Debug\Test7App.exe
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\bin\Debug\Test7App.pdb
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\bin\Debug\EntityFramework.dll
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\bin\Debug\EntityFramework.xml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\App.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\MainWindow.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageAddGrade.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageAddStudent.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageDeleteStudent.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageEditGrade.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageEditing.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageJournalStudent.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageListStudent.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageMainAdmin.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageAdmin\PageMvc.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageMain\PageInLogin.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\PageMain\PageRegistration.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\WindowApp\WindowHelp.baml
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\Test7App.g.resources
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\Test7App.Properties.Resources.resources
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\Test7App.csproj.GenerateResource.cache
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\Test7App.csproj.CoreCompileInputs.cache
+C:\Users\reddo\Downloads\0206 (1)\Test7App\Test7App\obj\Debug\Test7App.csproj.CopyComplete

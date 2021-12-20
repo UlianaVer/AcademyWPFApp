@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StudentsDB1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Discipline">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdTeacher" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Teacher" Relationship="Self.FK_Discipline_Teacher" FromRole="Discipline" ToRole="Teacher" />
+    <NavigationProperty Name="Journal1" Relationship="Self.FK_Journal1_Discipline" FromRole="Discipline" ToRole="Journal1" />
+  </EntityType>
+  <EntityType Name="FormTime">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Student_FormTime" FromRole="FormTime" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="HistoryStudent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdStudent" Type="Int32" Nullable="false" />
+    <Property Name="idUser" Type="Int32" Nullable="false" />
+    <Property Name="IdStatus" Type="Int32" Nullable="false" />
+    <Property Name="DateEvent" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Status" Relationship="Self.FK_HistoryStudent_Status" FromRole="HistoryStudent" ToRole="Status" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_HistoryStudent_Student" FromRole="HistoryStudent" ToRole="Student" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_HistoryStudent_User1" FromRole="HistoryStudent" ToRole="User1" />
+  </EntityType>
+  <EntityType Name="Journal1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdStudent" Type="Int32" Nullable="false" />
+    <Property Name="IdDiscipline" Type="Int32" Nullable="false" />
+    <Property Name="Evaluation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdNameGroup" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Discipline" Relationship="Self.FK_Journal1_Discipline" FromRole="Journal1" ToRole="Discipline" />
+    <NavigationProperty Name="NameGroup" Relationship="Self.FK_Journal1_NameGroup" FromRole="Journal1" ToRole="NameGroup" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Journal1_Student" FromRole="Journal1" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="NameGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Journal1" Relationship="Self.FK_Journal1_NameGroup" FromRole="NameGroup" ToRole="Journal1" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Student_NameGroup" FromRole="NameGroup" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_User1_Role" FromRole="Role" ToRole="User1" />
+  </EntityType>
+  <EntityType Name="Special">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Student_Special" FromRole="Special" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="HistoryStudent" Relationship="Self.FK_HistoryStudent_Status" FromRole="Status" ToRole="HistoryStudent" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdNameGroup" Type="Int32" Nullable="false" />
+    <Property Name="IdSpecial" Type="Int32" Nullable="false" />
+    <Property Name="IdYearAdd" Type="Int32" Nullable="false" />
+    <Property Name="IdFormTime" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FormTime" Relationship="Self.FK_Student_FormTime" FromRole="Student" ToRole="FormTime" />
+    <NavigationProperty Name="HistoryStudent" Relationship="Self.FK_HistoryStudent_Student" FromRole="Student" ToRole="HistoryStudent" />
+    <NavigationProperty Name="Journal1" Relationship="Self.FK_Journal1_Student" FromRole="Student" ToRole="Journal1" />
+    <NavigationProperty Name="NameGroup" Relationship="Self.FK_Student_NameGroup" FromRole="Student" ToRole="NameGroup" />
+    <NavigationProperty Name="Special" Relationship="Self.FK_Student_Special" FromRole="Student" ToRole="Special" />
+    <NavigationProperty Name="YearAdd" Relationship="Self.FK_Student_YearAdd" FromRole="Student" ToRole="YearAdd" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Discipline" Relationship="Self.FK_Discipline_Teacher" FromRole="Teacher" ToRole="Discipline" />
+  </EntityType>
+  <EntityType Name="User1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdRole" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="HistoryStudent" Relationship="Self.FK_HistoryStudent_User1" FromRole="User1" ToRole="HistoryStudent" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_User1_Role" FromRole="User1" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="YearAdd">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Student_YearAdd" FromRole="YearAdd" ToRole="Student" />
+  </EntityType>
+  <Association Name="FK_Discipline_Teacher">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="Discipline" Type="Self.Discipline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Discipline">
+        <PropertyRef Name="IdTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Journal1_Discipline">
+    <End Role="Discipline" Type="Self.Discipline" Multiplicity="1" />
+    <End Role="Journal1" Type="Self.Journal1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Discipline">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Journal1">
+        <PropertyRef Name="IdDiscipline" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_FormTime">
+    <End Role="FormTime" Type="Self.FormTime" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormTime">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="IdFormTime" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HistoryStudent_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="HistoryStudent" Type="Self.HistoryStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HistoryStudent">
+        <PropertyRef Name="IdStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HistoryStudent_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="HistoryStudent" Type="Self.HistoryStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HistoryStudent">
+        <PropertyRef Name="IdStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HistoryStudent_User1">
+    <End Role="User1" Type="Self.User1" Multiplicity="1" />
+    <End Role="HistoryStudent" Type="Self.HistoryStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HistoryStudent">
+        <PropertyRef Name="idUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Journal1_NameGroup">
+    <End Role="NameGroup" Type="Self.NameGroup" Multiplicity="1" />
+    <End Role="Journal1" Type="Self.Journal1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NameGroup">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Journal1">
+        <PropertyRef Name="IdNameGroup" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Journal1_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="Journal1" Type="Self.Journal1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Journal1">
+        <PropertyRef Name="IdStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_NameGroup">
+    <End Role="NameGroup" Type="Self.NameGroup" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NameGroup">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="IdNameGroup" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User1_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="User1" Type="Self.User1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="IdRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Special">
+    <End Role="Special" Type="Self.Special" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Special">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="IdSpecial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_YearAdd">
+    <End Role="YearAdd" Type="Self.YearAdd" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YearAdd">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="IdYearAdd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StudentsDB1Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Discipline" EntityType="Self.Discipline" />
+    <EntitySet Name="FormTime" EntityType="Self.FormTime" />
+    <EntitySet Name="HistoryStudent" EntityType="Self.HistoryStudent" />
+    <EntitySet Name="Journal1" EntityType="Self.Journal1" />
+    <EntitySet Name="NameGroup" EntityType="Self.NameGroup" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="Special" EntityType="Self.Special" />
+    <EntitySet Name="Status" EntityType="Self.Status" />
+    <EntitySet Name="Student" EntityType="Self.Student" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Teacher" EntityType="Self.Teacher" />
+    <EntitySet Name="User1" EntityType="Self.User1" />
+    <EntitySet Name="YearAdd" EntityType="Self.YearAdd" />
+    <AssociationSet Name="FK_Discipline_Teacher" Association="Self.FK_Discipline_Teacher">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="Discipline" EntitySet="Discipline" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Journal1_Discipline" Association="Self.FK_Journal1_Discipline">
+      <End Role="Discipline" EntitySet="Discipline" />
+      <End Role="Journal1" EntitySet="Journal1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_FormTime" Association="Self.FK_Student_FormTime">
+      <End Role="FormTime" EntitySet="FormTime" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HistoryStudent_Status" Association="Self.FK_HistoryStudent_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="HistoryStudent" EntitySet="HistoryStudent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HistoryStudent_Student" Association="Self.FK_HistoryStudent_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="HistoryStudent" EntitySet="HistoryStudent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HistoryStudent_User1" Association="Self.FK_HistoryStudent_User1">
+      <End Role="User1" EntitySet="User1" />
+      <End Role="HistoryStudent" EntitySet="HistoryStudent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Journal1_NameGroup" Association="Self.FK_Journal1_NameGroup">
+      <End Role="NameGroup" EntitySet="NameGroup" />
+      <End Role="Journal1" EntitySet="Journal1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Journal1_Student" Association="Self.FK_Journal1_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Journal1" EntitySet="Journal1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_NameGroup" Association="Self.FK_Student_NameGroup">
+      <End Role="NameGroup" EntitySet="NameGroup" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User1_Role" Association="Self.FK_User1_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="User1" EntitySet="User1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Special" Association="Self.FK_Student_Special">
+      <End Role="Special" EntitySet="Special" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_YearAdd" Association="Self.FK_Student_YearAdd">
+      <End Role="YearAdd" EntitySet="YearAdd" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(StudentsDB1Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(StudentsDB1Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

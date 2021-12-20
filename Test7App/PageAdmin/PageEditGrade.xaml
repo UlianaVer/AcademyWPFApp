@@ -1,0 +1,47 @@
+﻿<Page x:Class="Test7App.PageAdmin.PageEditGrade"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Test7App.PageAdmin"
+      mc:Ignorable="d" 
+      d:DesignHeight="297" d:DesignWidth="800"
+      Title="Редактирование оценок">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal" 
+                    VerticalAlignment="Top">
+        <TextBlock 
+            Name="TextBlockName" 
+            Text="Название группы:" 
+            VerticalAlignment="Center"/>
+            <ComboBox
+            Name="CmdNameGroup" 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center" 
+            Width="120" 
+             SelectionChanged="CmdNameGroup_SelectionChanged"/>
+            
+        </StackPanel>
+        
+        <DataGrid AutoGenerateColumns="False" 
+                  Name="DataGridInfo" 
+                  VerticalAlignment="Bottom" 
+                  Height="250" 
+                  CanUserAddRows="False" 
+                  CanUserDeleteRows="False" 
+                  CanUserResizeRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ФИО"
+                                    Binding="{Binding Name}"/>
+                <DataGridTemplateColumn Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Изменить оценки" Click="Button_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

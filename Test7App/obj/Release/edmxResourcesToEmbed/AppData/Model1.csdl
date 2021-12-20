@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WsrTestAcademyOdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="WsrTestAcademyOdbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Discipline" EntityType="WsrTestAcademyOdbModel.Discipline" />
+    <EntitySet Name="FormTime" EntityType="WsrTestAcademyOdbModel.FormTime" />
+    <EntitySet Name="Journal" EntityType="WsrTestAcademyOdbModel.Journal" />
+    <EntitySet Name="NameGroup" EntityType="WsrTestAcademyOdbModel.NameGroup" />
+    <EntitySet Name="Role" EntityType="WsrTestAcademyOdbModel.Role" />
+    <EntitySet Name="Special" EntityType="WsrTestAcademyOdbModel.Special" />
+    <EntitySet Name="Student" EntityType="WsrTestAcademyOdbModel.Student" />
+    <EntitySet Name="Teacher" EntityType="WsrTestAcademyOdbModel.Teacher" />
+    <EntitySet Name="User" EntityType="WsrTestAcademyOdbModel.User" />
+    <EntitySet Name="YearAdd" EntityType="WsrTestAcademyOdbModel.YearAdd" />
+    <AssociationSet Name="FK_Journal_Discipline" Association="WsrTestAcademyOdbModel.FK_Journal_Discipline">
+      <End Role="Discipline" EntitySet="Discipline" />
+      <End Role="Journal" EntitySet="Journal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teacher_Discipline" Association="WsrTestAcademyOdbModel.FK_Teacher_Discipline">
+      <End Role="Discipline" EntitySet="Discipline" />
+      <End Role="Teacher" EntitySet="Teacher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_FormTime" Association="WsrTestAcademyOdbModel.FK_Student_FormTime">
+      <End Role="FormTime" EntitySet="FormTime" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Journal_NameGroup" Association="WsrTestAcademyOdbModel.FK_Journal_NameGroup">
+      <End Role="NameGroup" EntitySet="NameGroup" />
+      <End Role="Journal" EntitySet="Journal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Journal_Student" Association="WsrTestAcademyOdbModel.FK_Journal_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Journal" EntitySet="Journal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_NameGroup" Association="WsrTestAcademyOdbModel.FK_Student_NameGroup">
+      <End Role="NameGroup" EntitySet="NameGroup" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Role" Association="WsrTestAcademyOdbModel.FK_User_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Special" Association="WsrTestAcademyOdbModel.FK_Student_Special">
+      <End Role="Special" EntitySet="Special" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_YearAdd" Association="WsrTestAcademyOdbModel.FK_Student_YearAdd">
+      <End Role="YearAdd" EntitySet="YearAdd" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Discipline">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Journal" Relationship="WsrTestAcademyOdbModel.FK_Journal_Discipline" FromRole="Discipline" ToRole="Journal" />
+    <NavigationProperty Name="Teacher" Relationship="WsrTestAcademyOdbModel.FK_Teacher_Discipline" FromRole="Discipline" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="FormTime">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Student" Relationship="WsrTestAcademyOdbModel.FK_Student_FormTime" FromRole="FormTime" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Journal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdStudent" Type="Int32" Nullable="false" />
+    <Property Name="IdDiscipline" Type="Int32" Nullable="false" />
+    <Property Name="Evaluation" Type="Int32" Nullable="false" />
+    <Property Name="IdNameGroup" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Discipline" Relationship="WsrTestAcademyOdbModel.FK_Journal_Discipline" FromRole="Journal" ToRole="Discipline" />
+    <NavigationProperty Name="NameGroup" Relationship="WsrTestAcademyOdbModel.FK_Journal_NameGroup" FromRole="Journal" ToRole="NameGroup" />
+    <NavigationProperty Name="Student" Relationship="WsrTestAcademyOdbModel.FK_Journal_Student" FromRole="Journal" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="NameGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Journal" Relationship="WsrTestAcademyOdbModel.FK_Journal_NameGroup" FromRole="NameGroup" ToRole="Journal" />
+    <NavigationProperty Name="Student" Relationship="WsrTestAcademyOdbModel.FK_Student_NameGroup" FromRole="NameGroup" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="User" Relationship="WsrTestAcademyOdbModel.FK_User_Role" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Special">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Student" Relationship="WsrTestAcademyOdbModel.FK_Student_Special" FromRole="Special" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdNameGroup" Type="Int32" Nullable="false" />
+    <Property Name="IdSpecial" Type="Int32" Nullable="false" />
+    <Property Name="IdYearAdd" Type="Int32" Nullable="false" />
+    <Property Name="IdFormTime" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FormTime" Relationship="WsrTestAcademyOdbModel.FK_Student_FormTime" FromRole="Student" ToRole="FormTime" />
+    <NavigationProperty Name="Journal" Relationship="WsrTestAcademyOdbModel.FK_Journal_Student" FromRole="Student" ToRole="Journal" />
+    <NavigationProperty Name="NameGroup" Relationship="WsrTestAcademyOdbModel.FK_Student_NameGroup" FromRole="Student" ToRole="NameGroup" />
+    <NavigationProperty Name="Special" Relationship="WsrTestAcademyOdbModel.FK_Student_Special" FromRole="Student" ToRole="Special" />
+    <NavigationProperty Name="YearAdd" Relationship="WsrTestAcademyOdbModel.FK_Student_YearAdd" FromRole="Student" ToRole="YearAdd" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdDiscipline" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Discipline" Relationship="WsrTestAcademyOdbModel.FK_Teacher_Discipline" FromRole="Teacher" ToRole="Discipline" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdRole" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Role" Relationship="WsrTestAcademyOdbModel.FK_User_Role" FromRole="User" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="YearAdd">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Student" Relationship="WsrTestAcademyOdbModel.FK_Student_YearAdd" FromRole="YearAdd" ToRole="Student" />
+  </EntityType>
+  <Association Name="FK_Journal_Discipline">
+    <End Type="WsrTestAcademyOdbModel.Discipline" Role="Discipline" Multiplicity="1" />
+    <End Type="WsrTestAcademyOdbModel.Journal" Role="Journal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Discipline">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Journal">
+        <PropertyRef Name="IdDiscipline" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teacher_Discipline">
+    <End Type="WsrTestAcademyOdbModel.Discipline" Role="Discipline" Multiplicity="1" />
+    <End Type="WsrTestAcademyOdbModel.Teacher" Role="Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Discipline">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="IdDiscipline" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_FormTime">
+    <End Type="WsrTestAcademyOdbModel.FormTime" Role="FormTime" Multiplicity="1" />
+    <End Type="WsrTestAcademyOdbModel.Student" Role="Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormTime">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="IdFormTime" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Journal_NameGroup">
+    <End Type="WsrTestAcademyOdbModel.NameGroup" Role="NameGroup" Multiplicity="1" />
+    <End Type="WsrTestAcademyOdbModel.Journal" Role="Journal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NameGroup">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Journal">
+        <PropertyRef Name="IdNameGroup" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Journal_Student">
+    <End Type="WsrTestAcademyOdbModel.Student" Role="Student" Multiplicity="1" />
+    <End Type="WsrTestAcademyOdbModel.Journal" Role="Journal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Journal">
+        <PropertyRef Name="IdStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_NameGroup">
+    <End Type="WsrTestAcademyOdbModel.NameGroup" Role="NameGroup" Multiplicity="1" />
+    <End Type="WsrTestAcademyOdbModel.Student" Role="Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NameGroup">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="IdNameGroup" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Role">
+    <End Type="WsrTestAcademyOdbModel.Role" Role="Role" Multiplicity="1" />
+    <End Type="WsrTestAcademyOdbModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="IdRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Special">
+    <End Type="WsrTestAcademyOdbModel.Special" Role="Special" Multiplicity="1" />
+    <End Type="WsrTestAcademyOdbModel.Student" Role="Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Special">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="IdSpecial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_YearAdd">
+    <End Type="WsrTestAcademyOdbModel.YearAdd" Role="YearAdd" Multiplicity="1" />
+    <End Type="WsrTestAcademyOdbModel.Student" Role="Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YearAdd">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="IdYearAdd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

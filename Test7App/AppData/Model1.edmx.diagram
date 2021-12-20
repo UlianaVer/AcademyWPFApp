@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0685db45e8c44d71ba6b05d191d9b53b" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="WsrTestAcademyOdbModel.Discipline" Width="1.5" PointX="0.75" PointY="9.125" />
+        <EntityTypeShape EntityType="WsrTestAcademyOdbModel.FormTime" Width="1.5" PointX="3.75" PointY="9.625" />
+        <EntityTypeShape EntityType="WsrTestAcademyOdbModel.HistoryStudent" Width="1.5" PointX="9.625" PointY="3.875" />
+        <EntityTypeShape EntityType="WsrTestAcademyOdbModel.Journal" Width="1.5" PointX="3" PointY="3.875" />
+        <EntityTypeShape EntityType="WsrTestAcademyOdbModel.NameGroup" Width="1.5" PointX="0.75" PointY="4.25" />
+        <EntityTypeShape EntityType="WsrTestAcademyOdbModel.Role" Width="1.5" PointX="3.75" PointY="12.5" />
+        <EntityTypeShape EntityType="WsrTestAcademyOdbModel.Special" Width="1.5" PointX="3.75" PointY="1" />
+        <EntityTypeShape EntityType="WsrTestAcademyOdbModel.Status" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="WsrTestAcademyOdbModel.Student" Width="1.5" PointX="6" PointY="3.5" />
+        <EntityTypeShape EntityType="WsrTestAcademyOdbModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.375" />
+        <EntityTypeShape EntityType="WsrTestAcademyOdbModel.Teacher" Width="1.5" PointX="3" PointY="15.125" />
+        <EntityTypeShape EntityType="WsrTestAcademyOdbModel.User" Width="1.5" PointX="6" PointY="12.125" />
+        <EntityTypeShape EntityType="WsrTestAcademyOdbModel.YearAdd" Width="1.5" PointX="3.75" PointY="7.25" />
+        <AssociationConnector Association="WsrTestAcademyOdbModel.FK_Journal_Discipline" />
+        <AssociationConnector Association="WsrTestAcademyOdbModel.FK_Teacher_Discipline" />
+        <AssociationConnector Association="WsrTestAcademyOdbModel.FK_Student_FormTime" />
+        <AssociationConnector Association="WsrTestAcademyOdbModel.FK_HistoryStudent_Status" />
+        <AssociationConnector Association="WsrTestAcademyOdbModel.FK_HistoryStudent_Student" />
+        <AssociationConnector Association="WsrTestAcademyOdbModel.FK_HistoryStudent_User" />
+        <AssociationConnector Association="WsrTestAcademyOdbModel.FK_Journal_NameGroup" />
+        <AssociationConnector Association="WsrTestAcademyOdbModel.FK_Journal_Student" />
+        <AssociationConnector Association="WsrTestAcademyOdbModel.FK_Student_NameGroup" />
+        <AssociationConnector Association="WsrTestAcademyOdbModel.FK_User_Role" />
+        <AssociationConnector Association="WsrTestAcademyOdbModel.FK_Student_Special" />
+        <AssociationConnector Association="WsrTestAcademyOdbModel.FK_Student_YearAdd" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
